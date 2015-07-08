@@ -1,0 +1,48 @@
+package datastructures;
+
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.Queue;
+
+/**
+ *
+ * @author John
+ */
+public class DataStructures {
+
+    public static void main(String[] args) {
+        
+        LinkedList<String> materials = new LinkedList<String>();
+        materials.addFirst("stone");
+        materials.addFirst("dirt");
+        materials.addFirst("iron");
+        System.out.println(materials.removeFirst()); //iron
+        System.out.println(materials.removeFirst()); //dirt
+        materials.addFirst("dirt");
+        materials.addFirst("iron");
+        System.out.println(materials.removeLast()); //stone
+        System.out.println(materials.removeLast()); //dirt
+        
+        LinkedList<String> prefixes = new LinkedList<String>();
+        prefixes.addLast("kila");
+        prefixes.addLast("mega");
+        prefixes.addLast("giga");
+        prefixes.addLast("tera");
+        prefixes.addLast("peta");
+        ListIterator<String> iterator = prefixes.listIterator();
+        System.out.println(iterator.next()); //kila
+        System.out.println(iterator.next()); //mega
+        System.out.println(iterator.next()); //giga
+        System.out.println(iterator.next()); //tera
+        System.out.println(iterator.previous()); //tera
+        System.out.println(iterator.previous()); //giga
+        System.out.println(iterator.previous()); //mega
+        
+        //LinkedList<Integer> roundsLinkedList = new LinkedList<Integer>();
+        //for (int i = 0; i < 16;
+        //roundsLinkedList.addLast(2);
+        //Queue<int> rounds = new LinkedList<int>();
+        
+    }
+
+}
